@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QDebug>
+#include <string>
+#include "globals.h"
 
 class IOOps : public QObject
 {
@@ -10,6 +12,24 @@ class IOOps : public QObject
 public:
     explicit IOOps(QObject *parent = nullptr);
     void intro();
+    void menu();
+
+// ******* Menu *******
+// Start
+private:
+    //Enum as User Input
+    typedef enum{
+        IO_read,
+        IO_write,
+        IO_NA
+    }Operation;
+    //Option on String
+    std::string ListOfOption[IO_NA] = {
+        "Read",
+        "Write"
+    };
+// End
+
 signals:
 
 };
