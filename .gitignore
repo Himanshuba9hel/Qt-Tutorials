@@ -1,0 +1,15 @@
+#Removing Build File
+**/*build*/
+*.user
+
+# Qt Creator
+*.user
+*.user.*
+*.autosave
+
+# Build directories
+build*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
