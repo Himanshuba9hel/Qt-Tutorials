@@ -40,11 +40,14 @@ add_executable(Theading
     main.cpp
     Example1/simplethread.cpp
     Example1/simplethread.h
+    Example2/asynchronousthread.cpp
+    Example2/asynchronousthread.h
 )
 
 target_include_directories(Theading
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/Example1
+        ${CMAKE_CURRENT_SOURCE_DIR}/Example2
 )
 
 target_link_libraries(Theading
