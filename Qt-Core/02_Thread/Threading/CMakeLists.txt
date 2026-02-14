@@ -46,6 +46,8 @@ add_executable(Theading
     Example3/sequentialthread.cpp
     Example3/test.h
     Example3/test.cpp
+    Example4/test.h Example4/test.cpp
+    Example4/worker.h Example4/worker.cpp
 )
 
 target_include_directories(Theading
@@ -53,6 +55,7 @@ target_include_directories(Theading
         ${CMAKE_CURRENT_SOURCE_DIR}/Example1
         ${CMAKE_CURRENT_SOURCE_DIR}/Example2
         ${CMAKE_CURRENT_SOURCE_DIR}/Example3
+        ${CMAKE_CURRENT_SOURCE_DIR}/Example4
 )
 
 target_link_libraries(Theading

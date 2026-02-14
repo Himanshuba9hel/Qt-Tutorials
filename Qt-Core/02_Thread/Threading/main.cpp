@@ -67,5 +67,11 @@ int main(int argc, char *argv[])
 /*--------------------- Example 3 END   ---------------------*/
 
 
+/*--------------------- Example 4 START ---------------------*/
+/*  Inheriting QThread and Why you should not use it?        */
+    QThread::currentThread()->setObjectName("Main Thread");
+
+/*--------------------- Example 4 END   ---------------------*/
+
     return a.exec();
 }
