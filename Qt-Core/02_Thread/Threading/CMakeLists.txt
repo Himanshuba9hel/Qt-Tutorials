@@ -48,6 +48,7 @@ add_executable(Theading
     Example3/test.cpp
     Example4/test.h Example4/test.cpp
     Example4/worker.h Example4/worker.cpp
+    Example5/test2.h Example5/test2.cpp
 )
 
 target_include_directories(Theading
