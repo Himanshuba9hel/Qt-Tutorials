@@ -46,7 +46,7 @@ add_executable(Theading
     Example3/sequentialthread.cpp
     Example3/test.h
     Example3/test.cpp
-    Example4/test.h Example4/test.cpp
+    Example4/test3.h Example4/test3.cpp
     Example4/worker.h Example4/worker.cpp
     Example5/test2.h Example5/test2.cpp
 )
@@ -62,3 +62,4 @@ target_include_directories(Theading
 target_link_libraries(Theading
     Qt${QT_VERSION_MAJOR}::Core
 )
+add_subdirectory(Thread_LifeCycle)

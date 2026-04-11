@@ -1,9 +1,13 @@
 #include <QCoreApplication>
 
-#include "Example1/simplethread.h"
-#include "Example2/asynchronousthread.h"
-#include "Example3/sequentialthread.h"
-#include "Example3/test.h"
+// #include "Example1/simplethread.h"
+// #include "Example2/asynchronousthread.h"
+// #include "Example3/sequentialthread.h"
+// #include "Example3/test.h"
+// Example 4
+#include <QThread>
+#include "Example4/worker.h"
+#include "Example4/test3.h"
 
 int main(int argc, char *argv[])
 {
@@ -69,7 +73,17 @@ int main(int argc, char *argv[])
 
 /*--------------------- Example 4 START ---------------------*/
 /*  Inheriting QThread and Why you should not use it?        */
+
+/*.....*/
     QThread::currentThread()->setObjectName("Main Thread");
+
+    Test3 thread;
+    thread.setObjectName("Thread 1");
+
+    Worker worker;
+    worker.moveToThread(&thread);
+    QObject::connect(&thread,&QThread::started,&worker,&Worker::work);
+    thread.start();
 
 /*--------------------- Example 4 END   ---------------------*/
 
